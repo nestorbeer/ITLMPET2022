@@ -16,7 +16,10 @@ function recorrerProductosConForEach(){
         total = total + product.price
         console.log('Index',index)
         console.log('Productos',product.id, product.name, product.price)
+        //Se puede generar una nueva propiedad dentro de un ciclo
+        product.nuevaPropiedad = index
     });
+    console.table(productos)
     console.log(`El total es ${total}`)
 }
 
@@ -33,11 +36,32 @@ function recorrerConMap(){
     console.table('productosAux', productosAux)
 }
 
+function miFuncion(parametro){
+
+}
+
+const miFuncionArrow = (parametro)=>{
+
+}
+
 function recorrerConReduce(){
-    const productosAux = [1,2,3,4]
+    const numeros = [1,2,3,4]
     let total = 0
-    total = productosAux.reduce((acc,item)=>{
-        return acc = acc + item
+    let componentes = []
+    componentes = productos.reduce((acc,item)=>{
+        //console.log('Acc', acc)
+        if(item.price > 100){
+            acc.push(item)
+        }
+        return acc
+        
+    },[])
+
+    total = productos.reduce((acc,item)=>{
+        if(item.price>100){
+            acc = acc + item.price
+        }
+        return acc
     },0)
     console.log(total)
 }
@@ -48,9 +72,9 @@ function recorrerConFilter(){
 }
 
 function recorrerProductosConWhile(){
-    const productosOriginal = [1]
+    const productosOriginal = [1,2,3,4]
     const productosAux = []
-    let cantidadDeElemntos = 0
+    let cantidadDeElemntos = 2
 
     console.log('Antes de entrar al ciclo')
     while (cantidadDeElemntos > 0) {
@@ -67,7 +91,7 @@ function recorrerProductosConDoWhile(){
     const productosOriginal = [1]
     const productosAux = []
     console.log('Antes de entrar al ciclo')
-    let cantidadDeElemntos = 0
+    let cantidadDeElemntos = 5
 
     do {
         console.log('Entre al ciclo')
