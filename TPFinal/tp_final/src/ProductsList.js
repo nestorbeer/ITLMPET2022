@@ -1,13 +1,17 @@
+import { Container, ListGroup } from 'react-bootstrap'
+import ProductDetail from './ProductDetail'
 import './ProductsList.css'
 
 function ProductsList(){
     return(
-        <div>
-            <p>Producto1</p>
-            <p>Producto2</p>
-            <p>Producto3</p>
-            <p>Producto4</p>
-        </div>
+        <Container>
+            <ListGroup>
+            <ProductDetail></ProductDetail>
+            <ProductDetail></ProductDetail>
+            <ProductDetail></ProductDetail>
+            <ProductDetail></ProductDetail>
+            </ListGroup>
+        </Container>
     )
 }
 export default ProductsList

@@ -1,10 +1,11 @@
+import { Container } from 'react-bootstrap'
 import './Footer.css'
 
 function Footer(){
     return(
-        <div>
+        <Container>
             Aca vamos a poner el contenido del footer.
-        </div>
+        </Container>
     )
 }
 
