@@ -9,6 +9,7 @@ function App() {
   return (
     <Container> 
       <NavBar></NavBar>
+      <h1>Aca vamos a poner un banner</h1>
       <ProductsList></ProductsList>
       <Footer></Footer>
     </Container>
