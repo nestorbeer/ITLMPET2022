@@ -10,6 +10,7 @@ function App() {
     <Container> 
       <NavBar></NavBar>
       <h1>Aca vamos a poner un banner</h1>
+      <h2>Aca vamos a poner un banner mas chiquito</h2>
       <ProductsList></ProductsList>
       <Footer></Footer>
     </Container>
